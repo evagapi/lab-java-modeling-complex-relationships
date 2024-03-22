@@ -1,7 +1,7 @@
 package com.ironhack.labjavamodelingcomplexrelationships.repository;
 
-import com.ironhack.labjavamodelingcomplexrelationships.model.Member;
-import com.ironhack.labjavamodelingcomplexrelationships.model.Status;
+import com.ironhack.labjavamodelingcomplexrelationships.model.users.Member;
+import com.ironhack.labjavamodelingcomplexrelationships.model.users.MemberStatus;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,7 +11,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.Date;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
 class MemberRepositoryTest {
@@ -21,7 +22,7 @@ class MemberRepositoryTest {
 
     @BeforeEach
     void setUp() {
-        Member member1 = new Member("Alicia", Status.ACTIVE, new Date());
+        Member member1 = new Member("Alicia", MemberStatus.ACTIVE, new Date());
         memberRepository.save(member1);
     }
 
@@ -40,9 +41,9 @@ class MemberRepositoryTest {
 
     @Test
     public void findByStatusTest() {
-        Optional<Member> member = memberRepository.findByStatus(Status.ACTIVE);
+        Optional<Member> member = memberRepository.findByStatus(MemberStatus.ACTIVE);
         assertTrue(member.isPresent());
-        assertEquals(member.get().getStatus(), Status.ACTIVE);
+        assertEquals(member.get().getStatus(), MemberStatus.ACTIVE);
     }
 
 }

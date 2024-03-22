@@ -1,6 +1,6 @@
 package com.ironhack.labjavamodelingcomplexrelationships.service;
 
-import com.ironhack.labjavamodelingcomplexrelationships.model.Member;
+import com.ironhack.labjavamodelingcomplexrelationships.model.users.Member;
 import com.ironhack.labjavamodelingcomplexrelationships.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

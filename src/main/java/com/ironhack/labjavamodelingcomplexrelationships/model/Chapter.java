@@ -1,5 +1,6 @@
 package com.ironhack.labjavamodelingcomplexrelationships.model;
 
+import com.ironhack.labjavamodelingcomplexrelationships.model.users.Member;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Data;

@@ -1,6 +1,6 @@
 package com.ironhack.labjavamodelingcomplexrelationships.controller;
 
-import com.ironhack.labjavamodelingcomplexrelationships.model.Member;
+import com.ironhack.labjavamodelingcomplexrelationships.model.users.Member;
 import com.ironhack.labjavamodelingcomplexrelationships.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
