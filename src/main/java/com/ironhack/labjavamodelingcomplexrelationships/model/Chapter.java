@@ -26,12 +26,12 @@ public class Chapter {
     private Member president;
 
     @OneToMany(mappedBy = "chapter")
-    private List<Member> list;
+    private List<Member> members;
 
-    public Chapter(String name, String district, Member president, List<Member> list) {
+    public Chapter(String name, String district, Member president, List<Member> members) {
         this.name = name;
         this.district = district;
         this.president = president;
-        this.list = list;
+        this.members = members;
     }
 }

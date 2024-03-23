@@ -15,6 +15,7 @@ public class Member extends User {
     private Date renewalDate;
 
     @ManyToOne
+    @JoinColumn(name = "chapter_id")
     private Chapter chapter;
 
     public Member(String alicia, MemberStatus memberStatus, Date date) {
